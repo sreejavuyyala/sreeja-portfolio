@@ -1,7 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { Mail, ArrowDown } from "lucide-react";
 import { profile } from "../data/profile";
-import { HeroQuerySnippet } from "./HeroQuerySnippet";
 import { GithubIcon, LinkedinIcon } from "./icons/BrandIcons";
 
 export function Hero() {
@@ -40,10 +39,6 @@ export function Hero() {
           <motion.p variants={item} className="font-display text-xl text-slate sm:text-2xl">
             {profile.title}
           </motion.p>
-
-          <motion.div variants={item} className="pt-2">
-            <HeroQuerySnippet />
-          </motion.div>
 
           <motion.div variants={item} className="flex flex-wrap items-center gap-4 pt-2">
             <a

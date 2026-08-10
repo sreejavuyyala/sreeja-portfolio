@@ -34,7 +34,6 @@
   --color-console-border: #223038;
   --color-console-success: #29d398;
   --color-console-error: #ff6b6b;
-  --color-console-signal: #e2913f;
 }
 
 /* Dark theme. Same token names, new values — the console's own palette generalized

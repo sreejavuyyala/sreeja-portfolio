@@ -81,10 +81,9 @@ export function QueryConsole() {
           Query my career
         </h2>
         <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-slate">
-          The query at the top of the page was static. This one isn't — it's a real SQLite database, running in your
-          browser via WebAssembly, seeded from the same data behind everything above. Run one of the presets or
-          write your own query — JOINs, aggregates, and typos all work exactly like they would against any other
-          database.
+          This is a real SQLite database, running in your browser via WebAssembly, seeded from the same data behind
+          everything above. Run one of the presets or write your own query — JOINs, aggregates, and typos all work
+          exactly like they would against any other database.
         </p>
 
         <div className="mt-10">
