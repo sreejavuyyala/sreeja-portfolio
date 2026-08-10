@@ -21,7 +21,7 @@ export function Skills() {
   return (
     <section id="skills" className="scroll-mt-20 border-y border-slate-light/50 bg-surface py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionEyebrow index="05" label="Skills" />
+        <SectionEyebrow index="04" label="Skills" />
         <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">Skills</h2>
         <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-slate">
           Filter by where each one was actually used, rather than a rating she'd have to defend.
@@ -34,7 +34,7 @@ export function Skills() {
             onClick={() => setActiveContext(null)}
             className={`rounded-full border px-3.5 py-1.5 font-mono text-xs transition-colors ${
               activeContext === null
-                ? "border-primary bg-primary text-white"
+                ? "border-primary bg-primary text-on-primary"
                 : "border-slate-light/70 text-slate hover:border-primary hover:text-primary"
             }`}
           >
@@ -48,7 +48,7 @@ export function Skills() {
               onClick={() => setActiveContext(context)}
               className={`rounded-full border px-3.5 py-1.5 font-mono text-xs transition-colors ${
                 activeContext === context
-                  ? "border-primary bg-primary text-white"
+                  ? "border-primary bg-primary text-on-primary"
                   : "border-slate-light/70 text-slate hover:border-primary hover:text-primary"
               }`}
             >

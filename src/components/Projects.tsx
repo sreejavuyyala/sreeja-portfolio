@@ -13,7 +13,7 @@ export function Projects() {
   return (
     <section id="projects" className="scroll-mt-20 bg-bg py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionEyebrow index="04" label="Projects" />
+        <SectionEyebrow index="03" label="Projects" />
         <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">Projects</h2>
 
         {featured && <FeaturedProject project={featured} />}
@@ -117,7 +117,7 @@ function FeaturedProject({ project }: { project: Project }) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-ink"
+                className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-on-primary transition-colors hover:bg-ink hover:text-bg"
               >
                 View dashboard
                 <ExternalLink size={14} aria-hidden="true" />
@@ -137,7 +137,7 @@ function FeaturedProject({ project }: { project: Project }) {
           </div>
         </div>
 
-        <div className="relative min-h-[320px] border-t border-primary/20 bg-ink lg:border-t-0 lg:border-l">
+        <div className="relative min-h-[320px] border-t border-primary/20 bg-console-bg lg:border-t-0 lg:border-l">
           {previewActive && project.liveUrl ? (
             <iframe
               src={project.liveUrl}

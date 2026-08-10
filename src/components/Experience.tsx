@@ -25,7 +25,7 @@ export function Experience() {
   return (
     <section id="experience" className="scroll-mt-20 border-y border-slate-light/50 bg-surface py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionEyebrow index="03" label="Experience" />
+        <SectionEyebrow index="02" label="Experience" />
         <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
           Experience, as a pipeline
         </h2>

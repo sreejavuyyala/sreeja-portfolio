@@ -18,7 +18,7 @@ export function About() {
   return (
     <section id="about" className="scroll-mt-20 bg-bg py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionEyebrow index="02" label="About" />
+        <SectionEyebrow index="01" label="About" />
         <h2 className="sr-only">About</h2>
 
         <div className="mt-8 grid grid-cols-1 gap-12 md:grid-cols-3">

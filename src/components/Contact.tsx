@@ -18,7 +18,7 @@ export function Contact() {
         <div className="mt-8 flex flex-wrap items-center gap-4">
           <a
             href={`mailto:${profile.email}`}
-            className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-ink"
+            className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-on-primary transition-colors hover:bg-ink hover:text-bg"
           >
             <Mail size={16} aria-hidden="true" />
             Email

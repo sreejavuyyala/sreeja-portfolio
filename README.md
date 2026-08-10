@@ -38,6 +38,12 @@ The "Query My Career" section (`src/components/QueryConsole.tsx`) loads [sql.js]
 
 If sql.js fails to load (blocked WASM, offline, etc.), the section falls back to the same data rendered as plain HTML tables — it never renders an empty box.
 
+## Theming
+
+Light and dark are both first-class, defined as two sets of CSS custom properties in `src/index.css` (`:root` for light, `.dark` for dark) — components reference tokens like `bg-primary` or `text-ink`, never a literal hex, so nothing needs a `dark:` variant. A tiny inline script in `index.html` reads `localStorage` (falling back to `prefers-color-scheme`) and applies the `dark` class before first paint, so there's no flash of the wrong theme. The toggle lives in the header (`src/components/ThemeToggle.tsx` / `src/hooks/useTheme.ts`) and persists the explicit choice.
+
+The SQL console keeps its own fixed dark palette (`--color-console-*`) in both themes — it's meant to always read as a terminal, not shift with the page.
+
 ## Deploying to GitHub Pages
 
 This repo deploys automatically via `.github/workflows/deploy.yml` on every push to `main`.

@@ -21,7 +21,6 @@ function App() {
 
       <main id="main-content">
         <Hero />
-        <QueryConsole />
         <About />
         <PipelineDivider />
         <Experience />
@@ -29,6 +28,7 @@ function App() {
         <PipelineDivider />
         <Skills />
         <Education />
+        <QueryConsole />
         <Contact />
       </main>
 

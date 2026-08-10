@@ -76,14 +76,15 @@ export function QueryConsole() {
   return (
     <section id="query" ref={sectionRef} className="scroll-mt-20 border-b border-slate-light/50 bg-bg py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionEyebrow index="01" label="Query My Career" />
+        <SectionEyebrow index="06" label="Query My Career" />
         <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
           Query my career
         </h2>
         <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-slate">
-          This is a real SQLite database, running in your browser via WebAssembly, seeded from the same data behind
-          this page. Run one of the presets or write your own query — JOINs, aggregates, and typos all work exactly
-          like they would against any other database.
+          The query at the top of the page was static. This one isn't — it's a real SQLite database, running in your
+          browser via WebAssembly, seeded from the same data behind everything above. Run one of the presets or
+          write your own query — JOINs, aggregates, and typos all work exactly like they would against any other
+          database.
         </p>
 
         <div className="mt-10">

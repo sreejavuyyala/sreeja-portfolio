@@ -3,6 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Applies the right theme class before first paint, so dark-theme visitors
+         never see a flash of the light theme. Must run before any CSS renders. -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          if (theme === "dark") document.documentElement.classList.add("dark");
+        } catch (e) {}
+      })();
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,7 +36,8 @@
       content="Software Engineer with 3 years across backend and data engineering — REST APIs and microservices in Python, Java (Spring Boot), and .NET Core, ETL pipelines, and BI, shipped in production at PNC and CVS Health."
     />
     <meta name="author" content="Sreeja Vuyyala" />
-    <meta name="theme-color" content="#F3F5F7" />
+    <meta name="theme-color" content="#F3F5F7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0B1116" media="(prefers-color-scheme: dark)" />
 
     <!-- Open Graph. Image/URL values are fully-qualified per the OG spec (Vite's base
          rewriting only applies to recognized asset tags, not meta[content]). -->

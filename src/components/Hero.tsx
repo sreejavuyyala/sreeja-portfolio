@@ -1,7 +1,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { Mail, ArrowDown } from "lucide-react";
 import { profile } from "../data/profile";
-import { PipelineDiagram } from "./PipelineDiagram";
+import { HeroQuerySnippet } from "./HeroQuerySnippet";
 import { GithubIcon, LinkedinIcon } from "./icons/BrandIcons";
 
 export function Hero() {
@@ -41,10 +41,14 @@ export function Hero() {
             {profile.title}
           </motion.p>
 
+          <motion.div variants={item} className="pt-2">
+            <HeroQuerySnippet />
+          </motion.div>
+
           <motion.div variants={item} className="flex flex-wrap items-center gap-4 pt-2">
             <a
               href={`mailto:${profile.email}`}
-              className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-ink"
+              className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-on-primary transition-colors hover:bg-ink hover:text-bg"
             >
               <Mail size={16} aria-hidden="true" />
               Email
@@ -75,15 +79,6 @@ export function Hero() {
               <ArrowDown size={14} aria-hidden="true" />
             </a>
           </motion.div>
-        </motion.div>
-
-        <motion.div
-          initial={reduceMotion ? { opacity: 1 } : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: reduceMotion ? 0 : 0.4 }}
-          className="rounded-xl border border-slate-light/60 bg-surface px-3 py-6 sm:px-10"
-        >
-          <PipelineDiagram />
         </motion.div>
       </div>
     </section>
