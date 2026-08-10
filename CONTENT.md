@@ -1,30 +1,24 @@
 # Placeholders needing real values
 
-Everything below is a clearly-marked `// TODO` in the code. Nothing fake has been filled in — these fields are either empty/unset or omitted from the rendered page until you provide real values.
+Everything below is either a `// PLACEHOLDER` comment in the code or an unset/omitted field. Nothing fake has been filled in.
 
-## 1. GitHub profile URL
+## 1. About section copy — needs Sreeja's own words
 
-**File:** `src/data/profile.ts` — `profile.github.url`
+**File:** `src/data/profile.ts` — `profile.aboutParagraphs`
 
-Currently empty, and the GitHub button/link is hidden on the Hero and Contact sections (`profile.github.isPlaceholder: true`) so no dead link is shown. Once you have the URL:
-
-```ts
-github: {
-  label: "GitHub",
-  url: "https://github.com/<your-username>",
-  isPlaceholder: false,
-},
-```
+This is a **draft**, not Sreeja's actual writing. It was written from the direction given for the About section (regulated-industry stakes, pipelines that don't page anyone at 3am, audit-ready schemas, query plans going from seconds to milliseconds), but it's not something she said — it's a placeholder standing in until she reviews, edits, or replaces it. Read it, then either approve it, rewrite it, or hand it back for another pass. Two sincere sentences from her beat a plausible-sounding paragraph she didn't write.
 
 ## 2. Project repo URLs
 
-**File:** `src/data/projects.ts` — `repoUrl` on each of the three projects
+**File:** `src/data/projects.ts` — `repoUrl` on three of the four projects
 
-All three are currently `undefined`, so no "View code" link renders on those cards. Set `repoUrl: "https://github.com/..."` on any project once it has a public repo, and the link appears automatically.
+The Crime Analysis project already has both `repoUrl` and `liveUrl` set (it's the one with a public repo and a live dashboard). These three don't have public repos yet, so no "View code" link renders on their cards:
 
 - Distributed Healthcare Data Platform
 - AI-Powered Predictive Analytics System
 - ETL Data Automation Pipeline
+
+Set `repoUrl: "https://github.com/..."` on any of them once it has a public repo, and the link appears automatically. If any of them also gets a live deployment, add `liveUrl` too.
 
 ## 3. Resume PDF
 
@@ -38,4 +32,4 @@ Not currently used — the design intentionally has no headshot. If you want to 
 
 **File:** `public/og-image.png`
 
-A placeholder Open Graph/Twitter card image was generated programmatically (name, title, and the pipeline motif on the brand palette) so link previews aren't broken. Swap it for a real designed 1200×630 image if you want something more polished — same filename, same path, no code changes needed.
+A placeholder Open Graph/Twitter card image was generated programmatically (name, title, and the six-stage pipeline motif on the current brand palette) so link previews aren't broken. Swap it for a real designed 1200×630 image if you want something more polished — same filename, same path, no code changes needed.

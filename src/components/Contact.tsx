@@ -7,7 +7,7 @@ export function Contact() {
   return (
     <section id="contact" className="scroll-mt-20 border-t border-slate-light/50 bg-surface py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionEyebrow index="06" label="Contact" />
+        <SectionEyebrow index="07" label="Contact" />
         <h2 className="mt-4 max-w-xl font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
           {profile.email}
         </h2>
@@ -32,17 +32,15 @@ export function Contact() {
             <LinkedinIcon size={16} />
             LinkedIn
           </a>
-          {!profile.github.isPlaceholder && (
-            <a
-              href={profile.github.url}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="inline-flex items-center gap-2 rounded-md border border-slate-light px-4 py-2.5 text-sm font-medium text-ink transition-colors hover:border-primary hover:text-primary"
-            >
-              <GithubIcon size={16} />
-              GitHub
-            </a>
-          )}
+          <a
+            href={profile.github.url}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="inline-flex items-center gap-2 rounded-md border border-slate-light px-4 py-2.5 text-sm font-medium text-ink transition-colors hover:border-primary hover:text-primary"
+          >
+            <GithubIcon size={16} />
+            GitHub
+          </a>
         </div>
       </div>
     </section>

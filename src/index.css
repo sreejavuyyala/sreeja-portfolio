@@ -1,19 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
 
-  --color-bg: #f5f7f9;
+  --color-bg: #f3f5f7;
   --color-surface: #ffffff;
-  --color-ink: #10192b;
+  --color-ink: #10151c;
   --color-slate: #55677e;
-  --color-slate-light: #c7d0da;
-  --color-primary: #1b4b5a;
-  --color-primary-light: #e3edf0;
-  --color-signal: #e2a63b;
-  --color-signal-light: #fbf0dc;
+  --color-slate-light: #d7dee5;
+  --color-primary: #0f6e5d;
+  --color-primary-light: #e2f1ed;
+  --color-signal: #c4661f;
+  --color-signal-light: #f8e8d9;
+  /* Darker than --color-signal — meets 4.5:1 text contrast on light backgrounds; the
+     brighter --color-signal is reserved for fills/badges, never small body text. */
+  --color-signal-text: #9c4e15;
+
+  /* SQL console — the one deliberately dark, bold surface on the page */
+  --color-console-bg: #0b1116;
+  --color-console-panel: #121a21;
+  --color-console-text: #d7f5ec;
+  --color-console-muted: #7f97a1;
+  --color-console-border: #223038;
+  --color-console-success: #29d398;
+  --color-console-error: #ff6b6b;
 }
 
 @layer base {

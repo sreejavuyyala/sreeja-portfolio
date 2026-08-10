@@ -58,22 +58,20 @@ export function Hero() {
               <LinkedinIcon size={16} />
               LinkedIn
             </a>
-            {!profile.github.isPlaceholder && (
-              <a
-                href={profile.github.url}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="inline-flex items-center gap-2 rounded-md border border-slate-light px-4 py-2.5 text-sm font-medium text-ink transition-colors hover:border-primary hover:text-primary"
-              >
-                <GithubIcon size={16} />
-                GitHub
-              </a>
-            )}
             <a
-              href="#experience"
+              href={profile.github.url}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="inline-flex items-center gap-2 rounded-md border border-slate-light px-4 py-2.5 text-sm font-medium text-ink transition-colors hover:border-primary hover:text-primary"
+            >
+              <GithubIcon size={16} />
+              GitHub
+            </a>
+            <a
+              href="#query"
               className="inline-flex items-center gap-1.5 px-2 py-2.5 text-sm font-medium text-slate transition-colors hover:text-ink"
             >
-              View experience
+              Query my career
               <ArrowDown size={14} aria-hidden="true" />
             </a>
           </motion.div>
