@@ -7,7 +7,7 @@ import { SectionEyebrow } from "./SectionEyebrow";
 
 export function Projects() {
   const reduceMotion = useReducedMotion();
-  const featured = projects.find((p) => p.featured);
+  const featuredProjects = projects.filter((p) => p.featured);
   const rest = projects.filter((p) => !p.featured);
 
   return (
@@ -16,7 +16,13 @@ export function Projects() {
         <SectionEyebrow index="03" label="Projects" />
         <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">Projects</h2>
 
-        {featured && <FeaturedProject project={featured} />}
+        {featuredProjects.length > 0 && (
+          <div className="mt-10 flex flex-col gap-8">
+            {featuredProjects.map((project) => (
+              <FeaturedProject key={project.id} project={project} />
+            ))}
+          </div>
+        )}
 
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
           {rest.map((project, i) => (
@@ -75,11 +81,11 @@ function FeaturedProject({ project }: { project: Project }) {
   const [previewActive, setPreviewActive] = useState(false);
 
   return (
-    <div className="mt-10 overflow-hidden rounded-xl border border-primary/30 bg-surface">
+    <div className="overflow-hidden rounded-xl border border-primary/30 bg-surface">
       <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr]">
         <div className="flex flex-col gap-5 p-6 sm:p-8">
           <div>
-            <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-signal-text">Lead project · {project.year}</p>
+            <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-signal-text">Featured · {project.context} · {project.year}</p>
             <h3 className="mt-1 font-display text-2xl font-semibold text-ink">{project.name}</h3>
           </div>
 

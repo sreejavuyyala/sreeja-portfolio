@@ -12,13 +12,17 @@ This is a **draft**, not Sreeja's actual writing. It was written from the direct
 
 **File:** `src/data/projects.ts` — `repoUrl` on three of the four projects
 
-The Crime Analysis project already has both `repoUrl` and `liveUrl` set (it's the one with a public repo and a live dashboard). These three don't have public repos yet, so no "View code" link renders on their cards:
+Crime Analysis, Distributed Healthcare Data Platform, and AI-Powered
+Predictive Analytics System all now have public repos and live GitHub
+Pages dashboards (`repoUrl` + `liveUrl` set, `featured: true`, real stats
+pulled from each repo's measured results). Only one project still has no
+public repo, so no "View code" link renders on its card:
 
-- Distributed Healthcare Data Platform
-- AI-Powered Predictive Analytics System
 - ETL Data Automation Pipeline
 
-Set `repoUrl: "https://github.com/..."` on any of them once it has a public repo, and the link appears automatically. If any of them also gets a live deployment, add `liveUrl` too.
+Set `repoUrl: "https://github.com/..."` on it once it has a public repo,
+and the link appears automatically. If it also gets a live deployment,
+add `liveUrl` too.
 
 ## 3. Resume PDF
 
