@@ -75,13 +75,22 @@ export const projects: Project[] = [
     name: "ETL Data Automation Pipeline",
     year: "2024",
     context: "Personal Project",
-    summary: "Fully automated ETL pipeline for scheduled data movement, replacing a manual export-and-load process.",
+    summary:
+      "Scheduled, self-validating ETL moving Microsoft's AdventureWorks2022 sales data into a SQL Server 2022 reporting warehouse, with metadata-driven data-quality rules, exact row-count reconciliation, and failure alerting.",
     highlights: [
-      "Fully automated ETL pipeline for scheduled data movement across source systems, replacing a manual export-and-load process.",
-      "Row-count reconciliation, null and type checks, and failure notifications; cut manual intervention by ~50% and held data accuracy at ~99%.",
+      "Built a scheduled pipeline moving Sales.SalesOrderHeader and SalesOrderDetail from the AdventureWorks2022 OLTP sample into a staging/reporting warehouse — incremental extraction on a half-open ModifiedDate watermark, MERGE upserts, and a full audit trail of every run, check and rejected row in SQL. The watermark advances only after validation passes, so a failed run re-reads its own window instead of skipping data.",
+      "Layered 25 metadata-driven data-quality rules (null, domain, type, duplicate) that quarantine failing rows to a reject table with the whole row preserved as JSON, plus post-load reconciliation comparing the source's own reported counts against staged, loaded and quarantined totals — 100% reconciliation across 9 runs (36/36 checks) with zero unexplained row-count variance.",
+      "Proved the checks work rather than asserting it: 12 corrupted rows were injected, all 12 quarantined, none reached the warehouse, an alert fired, and the held watermark let the next run recover unaided — reproduced by GitHub Actions on every push against a real SQL Server. Azure Data Factory pipelines, a Logic App, Monitor rules and Bicep ship as the production-target orchestration, calling the same stored procedures.",
     ],
-    stack: ["SSIS", "Azure Data Factory", "SQL Server"],
-    // TODO: add repo URL once published — see CONTENT.md
-    repoUrl: undefined,
+    stack: ["SQL Server 2022", "T-SQL", "Python", "Docker"],
+    repoUrl: "https://github.com/sreejavuyyala/etl-data-automation-pipeline",
+    liveUrl: "https://sreejavuyyala.github.io/etl-data-automation-pipeline/",
+    stats: [
+      { label: "Rows moved", value: "152,782" },
+      { label: "Reconciliation", value: "100%" },
+      { label: "Data-quality rules", value: "25" },
+      { label: "Faults caught", value: "12 / 12" },
+    ],
+    featured: true,
   },
 ];

@@ -10,19 +10,28 @@ This is a **draft**, not Sreeja's actual writing. It was written from the direct
 
 ## 2. Project repo URLs
 
-**File:** `src/data/projects.ts` — `repoUrl` on three of the four projects
+**File:** `src/data/projects.ts`
 
-Crime Analysis, Distributed Healthcare Data Platform, and AI-Powered
-Predictive Analytics System all now have public repos and live GitHub
-Pages dashboards (`repoUrl` + `liveUrl` set, `featured: true`, real stats
-pulled from each repo's measured results). Only one project still has no
-public repo, so no "View code" link renders on its card:
+Resolved. All four projects now have public repos and live GitHub Pages
+dashboards (`repoUrl` + `liveUrl` set, `featured: true`, real stats pulled from
+each repo's measured results).
 
-- ETL Data Automation Pipeline
+ETL Data Automation Pipeline was the last one outstanding and is now published
+at `sreejavuyyala/etl-data-automation-pipeline`. Two things changed with it
+beyond adding the URLs, both worth knowing before the card is read aloud in an
+interview:
 
-Set `repoUrl: "https://github.com/..."` on it once it has a public repo,
-and the link appears automatically. If it also gets a live deployment,
-add `liveUrl` too.
+- **The SSIS claim is gone.** The project was built ADF-native — no `.dtsx`
+  package, no SSIS Integration Runtime. `SSIS` was also removed from
+  `src/data/skills.ts`, where its only backing was this project. Re-add it there
+  with a `PNC`/`CVS Health` context if there is real on-the-job SSIS experience.
+- **The "~50% less manual intervention" and "~99% data accuracy" figures are
+  gone.** No manual-process baseline was ever measured, so neither could be
+  derived honestly. The card now carries what the pipeline's own run log
+  actually recorded: 100% row-count reconciliation across 9 runs, zero
+  unexplained variance, 25 data-quality rules, and 12 of 12 injected faults
+  caught. The repo's `docs/metrics-methodology.md` documents what was real,
+  what was simulated, and what the numbers do not claim.
 
 ## 3. Resume PDF
 

@@ -89,7 +89,10 @@ export const skills: Skill[] = [
     contexts: ["CVS Health"],
     note: "Power BI dashboards built over Synapse at CVS Health.",
   },
-  { id: "ssis", name: "SSIS", category: "Data Engineering & ETL", contexts: ["Personal"], note: "Core of the personal ETL automation pipeline." },
+  // SSIS removed: its only backing was the personal ETL automation pipeline,
+  // which was built ADF-native — there is no .dtsx package and no SSIS runtime
+  // in that project. Re-add with a "PNC"/"CVS Health" context if there is real
+  // on-the-job SSIS experience to point at.
   { id: "ssrs", name: "SSRS", category: "Data Engineering & ETL", contexts: [] },
   { id: "databricks", name: "Databricks", category: "Data Engineering & ETL", contexts: [] },
   {
