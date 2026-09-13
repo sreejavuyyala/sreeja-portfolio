@@ -2,6 +2,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Mail, ArrowDown } from "lucide-react";
 import { profile } from "../data/profile";
 import { GithubIcon, LinkedinIcon } from "./icons/BrandIcons";
+import { PortraitPhoto } from "./PortraitPhoto";
 import headshot from "../assets/sreeja-headshot.webp";
 
 export function Hero() {
@@ -81,18 +82,13 @@ export function Hero() {
           initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative mx-auto aspect-[3/4] w-[240px] shrink-0 sm:w-[280px] md:w-[320px] lg:w-[360px]"
+          className="relative mx-auto aspect-[3/4] w-[200px] shrink-0 sm:w-[240px] md:w-[280px] lg:w-[300px]"
         >
           <div
-            className="absolute inset-[-14%] -z-10 rounded-full bg-primary/20 blur-3xl dark:bg-primary/15"
+            className="absolute -inset-10 -z-10 rounded-full bg-primary/15 blur-3xl dark:bg-primary/10"
             aria-hidden="true"
           />
-          <img
-            src={headshot}
-            alt={profile.name}
-            className="h-full w-full object-contain object-bottom select-none"
-            draggable={false}
-          />
+          <PortraitPhoto src={headshot} alt={profile.name} className="h-full w-full select-none" />
         </motion.div>
       </div>
     </section>
