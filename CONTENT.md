@@ -2,11 +2,11 @@
 
 Everything below is either a `// PLACEHOLDER` comment in the code or an unset/omitted field. Nothing fake has been filled in.
 
-## 1. About section copy — needs Sreeja's own words
+## 1. About section copy — still worth a pass in Sreeja's own words
 
 **File:** `src/data/profile.ts` — `profile.aboutParagraphs`
 
-This is a **draft**, not Sreeja's actual writing. It was written from the direction given for the About section (regulated-industry stakes, pipelines that don't page anyone at 3am, audit-ready schemas, query plans going from seconds to milliseconds), but it's not something she said — it's a placeholder standing in until she reviews, edits, or replaces it. Read it, then either approve it, rewrite it, or hand it back for another pass. Two sincere sentences from her beat a plausible-sounding paragraph she didn't write.
+Rewritten to be plain and direct (what she builds, where, and why she's careful about it) after the first draft's metaphor-heavy version read as confusing rather than personable. Still not verbatim from Sreeja — swap in her own phrasing where it says something she wouldn't actually say.
 
 ## 2. Project repo URLs
 
