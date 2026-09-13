@@ -2,6 +2,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Mail, ArrowDown } from "lucide-react";
 import { profile } from "../data/profile";
 import { GithubIcon, LinkedinIcon } from "./icons/BrandIcons";
+import headshot from "../assets/sreeja-headshot.webp";
 
 export function Hero() {
   const reduceMotion = useReducedMotion();
@@ -20,7 +21,7 @@ export function Hero() {
 
   return (
     <section id="top" className="border-b border-slate-light/50 bg-bg">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 pt-20 pb-16 sm:pt-28 sm:pb-20">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 pt-20 pb-16 sm:pt-28 sm:pb-20 md:grid-cols-[1fr_auto]">
         <motion.div variants={container} initial="hidden" animate="show" className="flex flex-col gap-5">
           <motion.p
             variants={item}
@@ -74,6 +75,24 @@ export function Hero() {
               <ArrowDown size={14} aria-hidden="true" />
             </a>
           </motion.div>
+        </motion.div>
+
+        <motion.div
+          initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="relative mx-auto aspect-[3/4] w-[240px] shrink-0 sm:w-[280px] md:w-[320px] lg:w-[360px]"
+        >
+          <div
+            className="absolute inset-[-14%] -z-10 rounded-full bg-primary/20 blur-3xl dark:bg-primary/15"
+            aria-hidden="true"
+          />
+          <img
+            src={headshot}
+            alt={profile.name}
+            className="h-full w-full object-contain object-bottom select-none"
+            draggable={false}
+          />
         </motion.div>
       </div>
     </section>
