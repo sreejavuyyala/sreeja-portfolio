@@ -6,7 +6,7 @@ Everything below is either a `// PLACEHOLDER` comment in the code or an unset/om
 
 **File:** `src/data/profile.ts` — `profile.aboutParagraphs`
 
-Rewritten to be plain and direct (what she builds, where, and why she's careful about it) after the first draft's metaphor-heavy version read as confusing rather than personable. Still not verbatim from Sreeja — swap in her own phrasing where it says something she wouldn't actually say.
+Keeps the original's reflective voice and imagery (the 3am pipeline, the schema with an answer ready, the query that got fast and quiet) but broken into shorter sentences instead of one long stacked clause, plus names CVS Health and PNC directly. Still not verbatim from Sreeja — swap in her own phrasing where it says something she wouldn't actually say.
 
 ## 2. Project repo URLs
 

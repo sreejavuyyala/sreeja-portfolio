@@ -16,8 +16,7 @@ export const profile: Profile = {
   },
   bio: "Software Engineer with 3 years across backend and data engineering, including 2 years shipping production services in healthcare and financial services. Builds REST APIs and microservices in Python, Java (Spring Boot), and .NET Core, and owns the ETL layer underneath them. Works test-first under DDD/TDD, and carries features from requirement through CI/CD deployment on Azure and AWS.",
   aboutParagraphs: [
-    "I'm a Software Engineer with three years of experience building backend systems and data pipelines, mostly in Python, Java (Spring Boot), and .NET Core. I design REST APIs and microservices, and I usually end up owning the data layer underneath them too — ETL pipelines, schema design, and query tuning.",
-    "Most of that has been in healthcare and financial services, at CVS Health and now PNC, where getting data wrong has real consequences. That's made me a careful engineer: I write tests before I write features, document my decisions, and would rather raise a concern in code review than let it slide.",
-    "I like the quieter parts of the job — catching a slow query before it becomes a complaint, or building a dashboard that flags a problem before anyone has to report it.",
+    "I like the parts of this job nobody notices when they're going right. A pipeline that doesn't page anyone at 3am. A schema that already has an answer when someone asks where a number came from. A query that used to take six seconds and now takes sixty milliseconds — so quietly that nobody ever finds out it was slow.",
+    "Most of my three years have been in healthcare and financial services — CVS Health, and now PNC — where getting data wrong isn't a cosmetic bug, it's a patient record or someone's money. That's shaped how I build: test-first, schema-first, and honest in code review about what a system can and can't actually guarantee.",
   ],
 };
